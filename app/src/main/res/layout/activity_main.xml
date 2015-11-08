@@ -9,82 +9,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Check"
-        android:id="@+id/btnCheck"
-        android:onClick="buttonOnClick"
-        android:layout_alignBaseline="@+id/txtNum"
-        android:layout_alignBottom="@+id/txtNum"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtNum"
-        android:hint="Enter a Number"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/btnCheck"
-        android:layout_toEndOf="@+id/btnCheck"
-        android:layout_marginLeft="56dp"
-        android:layout_marginStart="56dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="answer"
-        android:id="@+id/txtout"
-        android:layout_marginTop="43dp"
-        android:layout_below="@+id/btnCheck"
-        android:layout_alignRight="@+id/btnCheck"
-        android:layout_alignEnd="@+id/btnCheck" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Min"
-        android:id="@+id/txtMin"
-        android:layout_below="@+id/txtout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="48dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Max"
-        android:id="@+id/txtMax"
-        android:layout_alignTop="@+id/txtMin"
-        android:layout_alignRight="@+id/txtNum"
-        android:layout_alignEnd="@+id/txtNum" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="secret #"
-        android:id="@+id/txtSecret"
-        android:layout_alignTop="@+id/txtout"
-        android:layout_toLeftOf="@+id/txtMax"
-        android:layout_toStartOf="@+id/txtMax" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reset"
-        android:id="@+id/btnReset"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/txtout"
-        android:layout_toEndOf="@+id/txtout"
-        android:onClick="buttonOnClick" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Start"
         android:id="@+id/btnStart"
-        android:layout_alignTop="@+id/btnReset"
-        android:layout_toRightOf="@+id/btnReset"
-        android:layout_toLeftOf="@+id/txtMax"
-        android:layout_toStartOf="@+id/txtMax"
-        android:onClick="Start" />
+        android:onClick="Start"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="77dp" />
 
 </RelativeLayout>

@@ -15,79 +15,28 @@ import java.util.Random;
 
 public class MainActivity extends ActionBarActivity {
 
-    private EditText num;
-    private TextView txtout, txtmin,txtmax,txtsecret;
+/*
 
-    String input;
-    int min = 0, max= 100 , secret,flag = 0,guess;
+
+
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnReset = (Button) findViewById(R.id.btnReset);
-        btnReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                 Random rn = new Random();
-                 secret = rn.nextInt(100)+1;
-                 txtsecret = (TextView) findViewById(R.id.txtSecret);
-                 txtsecret.setText(Integer.toString(secret));
-             //  min = 0;
-               //  max = 100;
-                 txtmin = (TextView) findViewById(R.id.txtMin);
-                 txtmax = (TextView) findViewById(R.id.txtMax);
-                 txtmin.setText(Integer.toString(min));
-                 txtmax.setText(Integer.toString(max));
-            }
-        });
     }
-
-    public void buttonOnClick(View v) {
-
-        Button btnCheck = (Button) v;
-        num = (EditText) findViewById(R.id.txtNum);
-        txtout = (TextView) findViewById(R.id.txtout);
-        txtmin = (TextView) findViewById(R.id.txtMin);
-        txtmax = (TextView) findViewById(R.id.txtMax);
-        txtsecret = (TextView) findViewById(R.id.txtSecret);
-
-        Toast toast =new Toast(getApplicationContext());
-
-        input = num.getText().toString();
-        guess = Integer.parseInt(input);
-
-        if(guess <= min || guess >= max) {
-            //txtout.setText("Plz try again!");
-            toast.makeText(MainActivity.this,"Plz try again!",toast.LENGTH_SHORT).show();
-        }
-        else{
-            if (guess == secret) {
-                txtout.setText("u got it!");
-            }
-
-            else if(guess > secret) {
-                max = guess;
-                txtout.setText(num.getText());
-                txtmin.setText(Integer.toString(min));
-                txtmax.setText(Integer.toString(max));
-            }
-
-            else{
-                min = guess;
-                txtout.setText(num.getText());
-                txtmin.setText(Integer.toString(min));
-                txtmax.setText(Integer.toString(max));
-            }
-            }
-        }
 
     public void Start(View v){
 
-       // Button btnStart = (Button) v;
-       // Intent intent = new Intent(this, DisplayMessageActivity.class);
-        startActivity(new Intent(MainActivity.this, StartMenu.class));
+        Random rn = new Random();
+        int secret = rn.nextInt(100) + 1;
+        //data will pass to another activity
+        Intent i = new Intent(MainActivity.this, StartMenu.class);
+        i.putExtra("sNumber",Integer.toString(secret));
+        startActivity(i);
+
     }
 
     @Override
