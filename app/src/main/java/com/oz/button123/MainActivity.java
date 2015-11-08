@@ -17,8 +17,6 @@ public class MainActivity extends ActionBarActivity {
 
 /*
 
-
-
      */
 
     @Override
@@ -36,6 +34,7 @@ public class MainActivity extends ActionBarActivity {
         Intent i = new Intent(MainActivity.this, StartMenu.class);
         i.putExtra("sNumber",Integer.toString(secret));
         startActivity(i);
+
 
     }
 
